@@ -1,0 +1,33 @@
+.container {
+  margin-top: 20px;
+  margin-top: 3em;
+  height: 70vh;
+  min-height: 720px;
+}
+.row {
+  display: flex;
+}
+
+.imgBox {
+  max-width: 600px;
+  max-height: 400px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.productInfo {
+  margin: 0 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .productTitle {
+    h3 {
+      font-size: 2em;
+      font-style: italic;
+      margin-top: 0.5em;
+    }
+  }
+}

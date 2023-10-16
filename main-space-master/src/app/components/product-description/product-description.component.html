@@ -1,0 +1,15 @@
+<div class="container" *ngIf="displayItem">
+  <div class="row">
+    <div class="imgBox">
+      <img src="{{ displayItem.picture }}" />
+    </div>
+    <div class="productInfo">
+      <div class="productTitle">
+        <h3>{{ displayItem.name | uppercase }}</h3>
+      </div>
+      <div class="productDetails">
+        <p>{{ displayItem.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

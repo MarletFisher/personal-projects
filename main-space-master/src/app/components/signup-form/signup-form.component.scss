@@ -1,0 +1,113 @@
+.shell {
+  width: 100%;
+  height: 100%;
+}
+
+.formBody {
+  margin-left: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-flow: wrap;
+
+  .col {
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+
+    .addressSection .inputSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+  }
+
+  .formSubsection .row {
+    display: flex;
+    margin-bottom: 1em;
+    flex-flow: wrap;
+    label {
+      display: block;
+      margin-right: 1em;
+      width: 8em;
+    }
+  }
+}
+
+.formFooter {
+  margin-left: 2em;
+
+  display: flex;
+
+  button {
+    width: 8em;
+    height: 3em;
+    margin-right: 2em;
+  }
+}
+
+input {
+  height: 1.4em;
+}
+
+.formLabel {
+  display: flex;
+  align-items: center;
+}
+
+.col2 {
+  width: 100%;
+  max-width: 400px;
+  .notesRow {
+    height: 100%;
+  }
+}
+
+.notesSection {
+  height: 100%;
+  .notesRow {
+    display: flex;
+    height: 100%;
+    .notesLabel {
+      align-items: start;
+      margin-right: 6em;
+    }
+  }
+}
+
+#profileNotes {
+  width: 100%;
+  resize: vertical;
+}
+
+.errorFlag {
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff7575;
+  border-radius: 25%;
+  margin-left: 1em;
+  z-index: 1;
+  opacity: 0;
+
+  p {
+    color: white;
+  }
+}
+
+.errorMessage {
+  width: 35%;
+  height: 2em;
+  background: #ff7575;
+  border-radius: 0.5rem;
+  text-align: center;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: white;
+  }
+}

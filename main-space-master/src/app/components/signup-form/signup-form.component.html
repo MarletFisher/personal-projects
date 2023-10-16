@@ -1,0 +1,149 @@
+<div class="container">
+  <form [formGroup]="signupForm">
+    <div class="formHeader">
+      <h3>Sign Up</h3>
+    </div>
+    <div class="formBody">
+      <div class="col">
+        <div class="formSubsection">
+          <div class="formSubtitle">
+            <h4>Account Info</h4>
+          </div>
+          <div class="row">
+            <div class="formLabel">
+              <label for="username">Username: </label>
+            </div>
+            <input
+              msInputError
+              id="username"
+              type="text"
+              formControlName="username"
+            />
+            <div #usernameError class="errorFlag"><p>!</p></div>
+          </div>
+
+          <div class="row">
+            <div class="formLabel">
+              <label for="password">Password: </label>
+            </div>
+            <input id="password" type="password" formControlName="password" />
+            <div #passwordError class="errorFlag"><p>!</p></div>
+          </div>
+
+          <div class="row">
+            <div class="formLabel">
+              <label for="email">Email: </label>
+            </div>
+            <input id="email" type="text" formControlName="email" />
+            <div #emailError class="errorFlag"><p>!</p></div>
+          </div>
+        </div>
+
+        <div class="formSubsection" formGroupName="personalInfo">
+          <div class="formSubtitle">
+            <h4>Personal Info</h4>
+          </div>
+
+          <div class="row">
+            <div class="formLabel">
+              <label for="first-name">First Name: </label>
+            </div>
+            <input id="first-name" type="text" formControlName="firstName" />
+            <div #fnameError class="errorFlag"><p>!</p></div>
+          </div>
+
+          <div class="row">
+            <div class="formLabel">
+              <label for="last-name">Last Name: </label>
+            </div>
+            <input id="last-name" type="text" formControlName="lastName" />
+            <div #lnameError class="errorFlag"><p>!</p></div>
+          </div>
+
+          <div class="row">
+            <div class="formLabel">
+              <label for="phone-number">Phone Number: </label>
+            </div>
+            <input
+              id="phone-number"
+              type="text"
+              formControlName="phoneNumber"
+            />
+            <div #phoneError class="errorFlag"><p>!</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="col col2">
+        <div class="formSubtitle">
+          <h4>Address</h4>
+        </div>
+        <div class="formSubsection addressSection" formGroupName="address">
+          <div class="inputSection">
+            <div class="row">
+              <div class="formLabel">
+                <label for="address-street">Street Address: </label>
+              </div>
+              <input id="address-street" type="text" formControlName="street" />
+              <div #streetError class="errorFlag"><p>!</p></div>
+            </div>
+
+            <div class="row">
+              <div class="formLabel">
+                <label for="address-city">City: </label>
+              </div>
+              <input id="address-city" type="text" formControlName="city" />
+              <div #cityError class="errorFlag"><p>!</p></div>
+            </div>
+
+            <div class="row">
+              <div class="formLabel">
+                <label for="address-state">State: </label>
+              </div>
+              <input id="address-state" type="text" formControlName="state" />
+              <div #stateError class="errorFlag"><p>!</p></div>
+            </div>
+
+            <div class="row">
+              <div class="formLabel">
+                <label for="address-country">Country: </label>
+              </div>
+              <input
+                id="address-country"
+                type="text"
+                formControlName="country"
+              />
+              <div #countryError class="errorFlag"><p>!</p></div>
+            </div>
+
+            <div class="row">
+              <div class="formLabel">
+                <label for="address-zip">ZIP Code: </label>
+              </div>
+              <input id="address-zip" type="text" formControlName="zip" />
+              <div #zipError class="errorFlag"><p>!</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="notesSection">
+          <div class="row notesRow">
+            <div class="formLabel notesLabel">
+              <label for="profileNotes">Notes: </label>
+            </div>
+            <textarea
+              id="profileNotes"
+              type="text"
+              formControlName="notes"
+              placeholder="Special instructions..."
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="formFooter">
+      <button type="submit" (click)="onSubmit()">Submit</button>
+      <button (click)="onReset()">Reset</button>
+      <button (click)="autofillInfo()">Autofill</button>
+      <div #messageBox class="errorMessage"><p #errorMessage></p></div>
+    </div>
+  </form>
+</div>
